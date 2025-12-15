@@ -10,8 +10,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: url("bg.jpg") repeat-y center top;
-    background-size: 100% auto;
+    background-color: var(--bg-dark);
     color: var(--text-light);
     margin: 0;
     padding: 0;
