@@ -3,34 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensori - Le Mans Tech</title>
+    <title>Telemetria - Le Mans Tech</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>I Sensi dell'Auto</h1>
+    <header class="checkered-flag">
+        <div class="header-content">
+            <h1>Telemetria & Big Data</h1>
+            <p>Come trasformare terabyte di dati grezzi in decisioni vincenti.</p>
+        </div>
     </header>
 
     <div class="container">
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <a href="index.html" class="btn" style="margin-bottom: 40px;">&larr; Torna alla Dashboard</a>
 
-        <div class="detail-content">
-            <h2>Dal Pista al Box: Il Flusso Dati</h2>
-            <p>La telemetria è il ponte invisibile tra il pilota e gli ingegneri. I dati non vengono solo salvati a bordo, ma trasmessi in tempo reale.</p>
-            <h3>Raccolta e Trasmissione</h3>
-            <p>I dati vengono raccolti dalla ECU (Electronic Control Unit) e trasmessi via onde radio 4G/LTE e sistemi proprietari (es. Magneti Marelli o Cosworth) al muretto box.</p>
-            <h3>Software di Analisi</h3>
-            <p>Gli ingegneri utilizzano software come <strong>MoTeC i2</strong> o <strong>Wintax</strong> per visualizzare grafici a linee (trace) che mostrano velocità, giri motore e input del pilota sovrapposti alla mappa del circuito.</p>
+        <div class="detail-header">
+            <h2>Il Flusso Nervoso della Gara</h2>
+            <p>Durante una 24 ore, una singola vettura genera oltre 50 GB di dati telemetrici. Non si tratta solo di sapere quanto veloce va l'auto, ma di monitorare lo stato di salute di ogni componente (Health Monitoring) e ottimizzare la performance in tempo reale. Il "Muretto Box" è il centro di controllo dove questi dati vengono decifrati.</p>
         </div>
 
-        <br>
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <div class="split-section">
+            <div class="split-text">
+                <h3>Acquisizione e Trasmissione</h3>
+                <p>La telemetria a Le Mans è una sfida infrastrutturale. L'auto comunica con i box attraverso due canali principali:</p>
+                <ul>
+                    <li><strong>Canale Burst (Microonde):</strong> Quando l'auto passa sul rettilineo dei box, scarica un pacchetto massiccio di dati ad alta risoluzione tramite un sistema Wi-Fi direzionale.</li>
+                    <li><strong>Rete LTE 4G/5G Privata:</strong> Lungo i 13,6 km del circuito, una rete cellulare privata garantisce la copertura continua per i dati critici (allarmi motore, pressione gomme, posizione GPS).</li>
+                </ul>
+                <p>La latenza è il nemico numero uno: il team deve vedere cosa succede all'auto con un ritardo inferiore ai 200 millisecondi.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?auto=format&fit=crop&w=600&q=80" alt="Analisi dati monitor">
+            </div>
+        </div>
+
+        <div class="tech-box">
+            <h3>Il Software: Leggere le "Traces"</h3>
+            <p>Gli ingegneri di pista non guardano video, guardano grafici cartesiani chiamati "traces". Software come <strong>MoTeC i2</strong> o <strong>McLaren ATLAS</strong> sono lo standard.</p>
+            <p>Un grafico tipico sovrappone due giri (il giro attuale vs. il best lap). Se la linea della velocità del giro attuale scende prima di quella del best lap in approccio curva, l'ingegnere sa immediatamente che il pilota ha frenato in anticipo. Questo permette di dare indicazioni via radio del tipo: <em>"Perdi 2 decimi in curva 5, frena 5 metri più tardi."</em></p>
+        </div>
+
+        <div class="split-section reverse">
+            <div class="split-text">
+                <h3>Interazione Umana e Ruoli</h3>
+                <p>I dati vengono filtrati da diverse figure professionali prima di arrivare al pilota:</p>
+                <p><strong>Performance Engineer:</strong> Analizza i dati per l'assetto (sospensioni, aerodinamica) e suggerisce modifiche ai clic degli ammortizzatori per il prossimo pit stop.</p>
+                <p><strong>Race Engineer:</strong> È l'unico che parla con il pilota. Filtra le informazioni complesse fornite dagli analisti e le trasforma in comandi semplici e diretti ("Switch Map 3", "Cool Tires").</p>
+                <p><strong>System Engineer:</strong> Monitora i parametri vitali del motore ibrido. Se una temperatura sale troppo, è lui a decidere se ritirare l'auto o tentare un reset elettronico.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1580983539327-0c754d9c7d4a?auto=format&fit=crop&w=600&q=80" alt="Ingegneri al muretto">
+            </div>
+        </div>
+
+        <div class="fact-box">
+            <strong>Lo Sapevi?</strong> I dati sono criptati. Le squadre sono ossessionate dalla segretezza. Sebbene la direzione gara (ACO/FIA) abbia accesso a tutti i dati per verificare la regolarità, i team criptano le comunicazioni radio e i flussi dati per evitare che i rivali intercettino informazioni sul consumo di carburante o sulla strategia gomme.
+        </div>
+
+        <a href="index.html" class="btn" style="margin-top: 40px;">&larr; Torna alla Dashboard</a>
     </div>
 
-    <footer>
-        <p>Fonti utilizzate per questa pagina:</p>
-        <p><a href="https://www.brembo.com" target="_blank">Brembo Technical Data</a>, <a href="https://www.michelinmotorsport.com" target="_blank">Michelin Motorsport</a>.</p>
+    <footer class="checkered-flag">
+        <div class="footer-content">
+            <p>Fonti tecniche:</p>
+            <p><a href="https://www.motec.com.au" target="_blank">MoTeC Data</a> | <a href="https://www.cosworth.com" target="_blank">Cosworth Electronics</a></p>
+        </div>
     </footer>
 
 </body>

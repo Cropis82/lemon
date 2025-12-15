@@ -8,34 +8,78 @@
 </head>
 <body>
 
-    <header>
-        <h1>I Sensi dell'Auto</h1>
+    <header class="checkered-flag">
+        <div class="header-content">
+            <h1>Hardware: I Sensi dell'Auto</h1>
+            <p>Dall'accelerometro all'infrarosso: come l'auto "sente" la pista.</p>
+        </div>
     </header>
 
     <div class="container">
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <a href="index.html" class="btn" style="margin-bottom: 40px;">&larr; Torna alla Dashboard</a>
 
-        <div class="detail-content">
-            <h2>L'Ecosistema dei Sensori</h2>
-            <p>Una moderna Hypercar di Le Mans (LMH o LMDh) è dotata di centinaia di sensori che monitorano lo stato di salute ("Health Monitoring") e le prestazioni della vettura.</p>
-            
-            <h3>Tipologie Principali</h3>
+        <div class="detail-header">
+            <h2>L'Ecosistema Sensoriale di una Hypercar</h2>
+            <p>Nelle moderne vetture LMP1 e Hypercar, il pilota non è mai solo. È circondato da un sistema nervoso digitale composto da centinaia di sensori collegati tramite protocollo CAN-bus. Questi dispositivi devono resistere a vibrazioni estreme, calore oltre i 1000°C e forze G elevate per 24 ore consecutive.</p>
+        </div>
+
+        <div class="split-section">
+            <div class="split-text">
+                <h3>Dinamica del Veicolo: IMU e Sospensioni</h3>
+                <p>Al centro della vettura, solitamente sotto il sedile del pilota per essere vicina al baricentro, si trova la <strong>IMU (Inertial Measurement Unit)</strong>. Questo dispositivo contiene giroscopi e accelerometri a 6 assi.</p>
+                <p>Monitora costantemente:</p>
+                <ul>
+                    <li><strong>Accelerazione Longitudinale:</strong> Indica quanto l'auto frena o accelera.</li>
+                    <li><strong>Accelerazione Laterale:</strong> La forza G in curva (fino a 3.5G a Le Mans nelle curve Porsche).</li>
+                    <li><strong>Yaw Rate (Imbardata):</strong> Fondamentale per capire se l'auto sta sovrasterzando (scodando) o sottosterzando.</li>
+                </ul>
+                <p>Sulle sospensioni, invece, troviamo potenziometri lineari che misurano lo schiacciamento dell'ammortizzatore. Questi dati, incrociati con la velocità, permettono di calcolare il carico aerodinamico generato in ogni istante.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=600&q=80" alt="Sospensioni Meccaniche">
+            </div>
+        </div>
+
+        <div class="tech-box">
+            <h3>Focus Tecnico: Monitoraggio Pneumatici (TPMS)</h3>
+            <p>Le gomme sono l'unico punto di contatto con l'asfalto. I sensori TPMS (Tire Pressure Monitoring System) nel motorsport sono molto più avanzati di quelli stradali.</p>
             <ul>
-                <li><strong>IMU (Inertial Measurement Unit):</strong> Misura le forze G (longitudinali, laterali, verticali) e i tassi di rotazione (imbardata, rollio, beccheggio) fondamentali per capire il comportamento dinamico.</li>
-                <li><strong>Sensori di Pressione (TPMS):</strong> Monitorano in tempo reale la pressione e la temperatura degli pneumatici, critici per la sicurezza a 300 km/h.</li>
-                <li><strong>Potenziometri Lineari:</strong> Installati sulle sospensioni per misurare la corsa dell'ammortizzatore e calcolare il carico aerodinamico.</li>
-                <li><strong>Termocoppie e Infrarossi:</strong> Misurano le temperature dei freni (che possono superare i 1000°C) e del motore ibrido.</li>
-                <li><strong>GPS & Tubo di Pitot:</strong> Per la velocità rispetto al suolo e la velocità rispetto all'aria.</li>
+                <li><strong>Campionamento:</strong> Inviano dati fino a 50 volte al secondo.</li>
+                <li><strong>Temperatura Interna:</strong> Misurano non solo la pressione, ma la temperatura dell'aria interna al cerchio e la temperatura della carcassa.</li>
+                <li><strong>Analisi Strategica:</strong> Una pressione che sale troppo lentamente dopo un pit stop può indicare una foratura lenta (slow puncture) o un problema al cerchio, permettendo al team di richiamare l'auto prima che esploda la gomma.</li>
             </ul>
         </div>
 
-        <br>
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <div class="split-section reverse">
+            <div class="split-text">
+                <h3>Aerodinamica e Velocità</h3>
+                <p>Come si misura la velocità di un'auto che corre a 340 km/h? Il tachimetro basato sulla rotazione delle ruote non è sufficiente perché le ruote possono pattinare o bloccarsi.</p>
+                <p>Le auto di Le Mans utilizzano:</p>
+                <p><strong>1. GPS ad alta frequenza:</strong> Per la posizione assoluta e la velocità rispetto al suolo.</p>
+                <p><strong>2. Tubo di Pitot:</strong> Posizionato sul "naso" dell'auto, misura la pressione dinamica dell'aria. Questo dato serve per calcolare la <em>Airspeed</em> (velocità rispetto all'aria). La differenza tra velocità GPS e velocità dell'aria indica quanto vento (frontale o di coda) c'è sul rettilineo Mulsanne, influenzando i consumi e i rapporti del cambio.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1532906619279-a76c757eb799?auto=format&fit=crop&w=600&q=80" alt="Aerodinamica auto">
+            </div>
+        </div>
+
+        <div class="fact-box">
+            <strong>Lo Sapevi?</strong> I sensori di coppia sulle ruote motrici sono obbligatori per regolamento. La FIA monitora in tempo reale la potenza erogata (in kW) per assicurarsi che nessuno superi la curva di potenza massima consentita dal Balance of Performance (BoP). Se un sensore rileva 1 kW in più del lecito, scatta una penalità immediata.
+        </div>
+
+        <div class="detail-header">
+            <h3>Powertrain e Temperature</h3>
+            <p>Il motore termico e il sistema ibrido sono monitorati da centinaia di termocoppie. I freni in carbonio utilizzano sensori a infrarossi puntati sui dischi per assicurarsi che rimangano nella finestra operativa corretta (tra 400°C e 800°C). Se i freni sono troppo freddi non frenano ("glazing"), se sono troppo caldi si ossidano rapidamente.</p>
+        </div>
+
+        <a href="index.html" class="btn" style="margin-top: 40px;">&larr; Torna alla Dashboard</a>
     </div>
 
-    <footer>
-        <p>Fonti utilizzate per questa pagina:</p>
-        <p><a href="https://www.brembo.com" target="_blank">Brembo Technical Data</a>, <a href="https://www.michelinmotorsport.com" target="_blank">Michelin Motorsport</a>.</p>
+    <footer class="checkered-flag">
+        <div class="footer-content">
+            <p>Fonti utilizzate per l'elaborazione:</p>
+            <p><a href="https://www.brembo.com" target="_blank">Brembo Brakes Tech</a> | <a href="https://www.michelin.com" target="_blank">Michelin Competition</a> | <a href="https://www.bosch-motorsport.com" target="_blank">Bosch Motorsport</a></p>
+        </div>
     </footer>
 
 </body>

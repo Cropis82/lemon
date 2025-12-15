@@ -3,34 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensori - Le Mans Tech</title>
+    <title>Simulazione - Le Mans Tech</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>I Sensi dell'Auto</h1>
+    <header class="checkered-flag">
+        <div class="header-content">
+            <h1>Il Mondo Virtuale</h1>
+            <p>Dove la gara viene vinta mesi prima di accendere i motori.</p>
+        </div>
     </header>
 
     <div class="container">
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <a href="index.html" class="btn" style="margin-bottom: 40px;">&larr; Torna alla Dashboard</a>
 
-        <div class="detail-content">
-            <h2>Il Mondo Virtuale</h2>
-            <p>La gara inizia mesi prima nei quartier generali dei team grazie alla simulazione digitale.</p>
-            <h3>Driver-in-the-Loop (DiL)</h3>
-            <p>I piloti guidano su simulatori idraulici che replicano le forze fisiche e utilizzano scansioni laser (LiDAR) del circuito per una precisione millimetrica. Questo permette di definire l'assetto base prima di arrivare in pista.</p>
-            <h3>Digital Twin</h3>
-            <p>Viene creato un "gemello digitale" dell'auto. Se un pezzo si rompe durante la gara reale, gli ingegneri possono testare soluzioni sul gemello digitale per capire se l'auto può finire la gara.</p>
+        <div class="detail-header">
+            <h2>Dal Bit all'Asfalto</h2>
+            <p>Con i test in pista strettamente limitati dal regolamento per contenere i costi, la simulazione è diventata l'arma più potente dei costruttori (Ferrari, Toyota, Porsche). Si crea un ponte tra il mondo virtuale e quello reale che permette di sviluppare l'auto 24 ore su 24, 365 giorni l'anno.</p>
         </div>
 
-        <br>
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <div class="split-section">
+            <div class="split-text">
+                <h3>Driver-in-the-Loop (DiL)</h3>
+                <p>I simulatori professionali non sono videogiochi. Sono piattaforme idrauliche complesse (Stewart Platforms) che costano milioni di euro. Il "Driver-in-the-Loop" mette il pilota umano al centro di un modello matematico fisico.</p>
+                <p>Il simulatore replica:</p>
+                <ul>
+                    <li>Le forze G tramite movimenti dello chassis e tensionamento delle cinture.</li>
+                    <li>La coppia reale sul volante (Force Feedback industriale).</li>
+                    <li>La gestione termica delle gomme e dei freni.</li>
+                </ul>
+                <p>I piloti passano giorni al simulatore prima di Le Mans per definire l'assetto base (molle, barre antirollio, altezze da terra) così che l'auto sia pronta all'uso appena scaricata dal camion.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1626387068571-002f235dbf41?auto=format&fit=crop&w=600&q=80" alt="Pilota al simulatore">
+            </div>
+        </div>
+
+        <div class="tech-box">
+            <h3>Il "Digital Twin" (Gemello Digitale)</h3>
+            <p>Ogni auto fisica ha un gemello digitale nei server del team. Il Digital Twin è un modello fisico che contiene le proprietà elastiche, termiche e aerodinamiche di ogni singolo pezzo dell'auto.</p>
+            <p>Durante la gara, se si rompe un sensore o l'auto subisce un danno aerodinamico, gli ingegneri "rompono" lo stesso pezzo sul gemello digitale. Lanciano una simulazione per vedere se l'auto può finire la gara in quelle condizioni o se è troppo pericoloso, supportando la decisione del direttore sportivo in pochi minuti.</p>
+        </div>
+
+        <div class="split-section reverse">
+            <div class="split-text">
+                <h3>LiDAR e Scansione Laser</h3>
+                <p>Perché la simulazione sia utile, l'ambiente virtuale deve essere perfetto. Il circuito di Le Mans viene scansionato con tecnologia LiDAR (Light Detection and Ranging).</p>
+                <p>Un furgone percorre la pista sparando milioni di raggi laser per creare una "nuvola di punti" 3D. Questa tecnica cattura ogni irregolarità dell'asfalto, ogni cordolo e ogni pendenza con precisione millimetrica. Se c'è una buca in uscita alla curva Mulsanne nella realtà, il simulatore darà un colpo al volante nello stesso identico punto.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Wireframe auto digitale">
+            </div>
+        </div>
+
+        <div class="fact-box">
+            <strong>Lo Sapevi?</strong> Esiste la "Motion Sickness" inversa. I piloti professionisti a volte stanno male sui simulatori se c'è anche un minimo ritardo (latenza) tra l'input del volante e la risposta visiva, perché il loro cervello, abituato a reazioni istantanee a 300 km/h, percepisce il disallineamento come un avvelenamento o un problema vestibolare.
+        </div>
+
+        <a href="index.html" class="btn" style="margin-top: 40px;">&larr; Torna alla Dashboard</a>
     </div>
 
-    <footer>
-        <p>Fonti utilizzate per questa pagina:</p>
-        <p><a href="https://www.brembo.com" target="_blank">Brembo Technical Data</a>, <a href="https://www.michelinmotorsport.com" target="_blank">Michelin Motorsport</a>.</p>
+    <footer class="checkered-flag">
+        <div class="footer-content">
+            <p>Partner tecnologici:</p>
+            <p><a href="https://www.ansys.com" target="_blank">Ansys Simulation</a> | <a href="https://www.rfactorpro.com" target="_blank">rFpro Software</a></p>
+        </div>
     </footer>
 
 </body>

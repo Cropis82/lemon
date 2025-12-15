@@ -1,139 +1,238 @@
-/* style.css - Design "Endurance Dark" */
+/* style.css - Design "Endurance Pro" */
 :root {
     --primary-color: #e60000; /* Rosso Racing */
+    --secondary-color: #1e3799; /* Blu WEC */
     --accent-color: #f1c40f;  /* Giallo Segnalazione */
-    --bg-dark: #121212;
-    --bg-card: #1e1e1e;
-    --text-light: #f0f0f0;
-    --text-dim: #b0b0b0;
+    --bg-dark: #0a0a0a;
+    --bg-panel: #141414;
+    --bg-highlight: #1c1c1c;
+    --text-light: #f5f5f5;
+    --text-dim: #cccccc;
+    --spacing-lg: 5rem;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-light);
     margin: 0;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
-/* Header */
-header {
-    background: linear-gradient(90deg, #000 0%, var(--primary-color) 100%);
-    padding: 2rem;
+/* --- CHECKERED FLAG THEME (CORRETTO) --- */
+.checkered-flag {
+    /* Colore di base (Quadrati Bianchi) */
+    background-color: #ffffff;
+    
+    /* Il trucco per la scacchiera: due gradienti identici a 45 gradi */
+    background-image: 
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%),
+        linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%);
+    
+    /* La magia avviene qui: il secondo pattern è spostato di metà della grandezza */
+    background-position: 0 0, 15px 15px;
+    
+    /* Dimensione totale del pattern (deve essere il doppio dell'offset) */
+    background-size: 30px 30px;
+    
+    padding: 15px 0; 
+    position: relative;
+    /* Opzionale: ombra interna per dare profondità rispetto al contenuto scuro */
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.8);
+}
+
+.header-content, .footer-content {
+    background-color: rgba(0, 0, 0, 0.95); /* Sfondo scuro per leggere il testo */
+    padding: 3rem 1rem;
     text-align: center;
+    border-top: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    margin: 10px 0; /* Lascia vedere gli scacchi ai bordi */
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
-header p {
-    color: var(--text-light);
-    font-weight: 300;
-}
-
-/* Layout Grid per la Home */
+/* --- HOME PAGE LAYOUT --- */
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-.grid-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-/* Card Stile */
-.card {
-    background-color: var(--bg-card);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    border: 1px solid #333;
+.vertical-stack {
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-lg); /* Molta spaziatura tra le card */
+}
+
+/* Card Orizzontale */
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--bg-panel);
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    min-height: 350px; /* Altezza minima per dare importanza */
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    border-color: var(--primary-color);
+    transform: scale(1.02);
+    border-color: var(--accent-color);
 }
 
-.card img {
+/* Gestione Immagine Card */
+.card-img-wrapper {
+    flex: 1; /* Prende il 50% dello spazio */
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
     width: 100%;
-    height: 200px;
+    height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
+.card:hover .card-img-wrapper img {
+    transform: scale(1.1);
+}
+
+/* Contenuto Testuale Card */
 .card-content {
-    padding: 20px;
-    flex-grow: 1;
+    flex: 1; /* Prende il 50% dello spazio */
+    padding: 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    border-left: 5px solid var(--primary-color); /* Accento laterale */
 }
 
 .card h3 {
-    margin-top: 0;
+    font-size: 2rem;
     color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
-/* Pulsanti */
+/* LOGICA ALTERNATA (ZIG-ZAG) */
+/* Seleziona le card pari e inverte l'ordine flex */
+.card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.card:nth-child(even) .card-content {
+    border-left: none;
+    border-right: 5px solid var(--primary-color); /* Sposta l'accento a destra */
+    text-align: right; /* Opzionale: allinea il testo a destra */
+}
+
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
+    padding: 12px 30px;
+    background: var(--primary-color);
     color: white;
     text-decoration: none;
-    border-radius: 4px;
     font-weight: bold;
-    margin-top: auto; /* Spinge il bottone in fondo alla card */
-    text-align: center;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 20px;
+    align-self: flex-start; /* Allinea a sinistra di default */
     transition: background 0.3s;
 }
 
+.card:nth-child(even) .btn {
+    align-self: flex-end; /* Sposta il bottone a destra nelle card invertite */
+}
+
 .btn:hover {
-    background-color: #ff3333;
+    background: #ff3333;
+    box-shadow: 0 0 15px var(--primary-color);
 }
 
-.btn-nav {
-    background-color: #333;
-    margin-bottom: 20px;
+/* --- DETTAGLI PAGINE APPROFONDITE --- */
+.detail-header {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
 }
 
-/* Stile Pagine Interne */
-.detail-content {
-    background: var(--bg-card);
-    padding: 40px;
-    border-radius: 8px;
-    margin-top: 20px;
-    border-left: 5px solid var(--accent-color);
-}
-
-.detail-content h2 {
+.detail-header h2 {
+    font-size: 2.5rem;
     color: var(--primary-color);
-    border-bottom: 1px solid #444;
+}
+
+/* Sezioni con contenuto laterale (Immagine a fianco testo) */
+.split-section {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.split-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.split-text {
+    flex: 3;
+}
+
+.split-image {
+    flex: 2;
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #444;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Box Tecnico (Stile diverso) */
+.tech-box {
+    background-color: #1a2639; /* Sfondo bluastro scuro */
+    border: 1px solid var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.tech-box h3 {
+    color: #4a90e2;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     padding-bottom: 10px;
 }
 
-/* Footer */
-footer {
-    background-color: #000;
-    text-align: center;
+/* Box "Lo Sapevi che" (Stile diverso) */
+.fact-box {
+    background-color: #2c2505; /* Sfondo giallastro scuro */
+    border-left: 5px solid var(--accent-color);
     padding: 20px;
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: var(--text-dim);
-    border-top: 3px solid var(--primary-color);
+    margin: 30px 0;
+    font-style: italic;
 }
 
-footer a {
-    color: var(--accent-color);
-    text-decoration: none;
+/* Footer Links */
+footer a { color: var(--accent-color); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* Responsive per Mobile */
+@media (max-width: 768px) {
+    .card, .card:nth-child(even) { flex-direction: column; }
+    .card-img-wrapper { height: 250px; flex: none; }
+    .card-content { padding: 20px; border: none; border-top: 5px solid var(--primary-color); text-align: left; }
+    .card:nth-child(even) .btn { align-self: flex-start; }
+    .split-section, .split-section.reverse { flex-direction: column; }
 }

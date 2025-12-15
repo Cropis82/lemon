@@ -3,38 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sensori - Le Mans Tech</title>
+    <title>AI & Strategia - Le Mans Tech</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>I Sensi dell'Auto</h1>
+    <header class="checkered-flag">
+        <div class="header-content">
+            <h1>AI e Strategia Predittiva</h1>
+            <p>Quando l'algoritmo decide la vittoria: gestione energia e tattica di gara.</p>
+        </div>
     </header>
 
     <div class="container">
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <a href="index.html" class="btn" style="margin-bottom: 40px;">&larr; Torna alla Dashboard</a>
 
-        <div class="detail-content">
-            <h2>Intelligenza Artificiale e Strategia</h2>
-            <p>A Le Mans non vince solo l'auto più veloce, ma quella che spende meno tempo ai box. Qui entra in gioco l'IA.</p>
-            <h3>Algoritmi Predittivi</h3>
-            <p>Software avanzati simulano milioni di scenari di gara in tempo reale (metodo Monte Carlo) per decidere:</p>
-            <ul>
-                <li>Quando fermarsi per il rifornimento in base alle Full Course Yellow.</li>
-                <li>Quale mescola di gomme utilizzare incrociando i dati meteo con il degrado previsto.</li>
-            </ul>
-            <h3>Ottimizzazione Energetica</h3>
-            <p>L'IA gestisce l'erogazione della potenza ibrida per massimizzare l'efficienza sui 13,6 km del circuito della Sarthe.</p>
+        <div class="detail-header">
+            <h2>Oltre l'Intuizione Umana</h2>
+            <p>A Le Mans non vince l'auto più veloce sul giro secco, ma quella che passa meno tempo ai box. Le decisioni strategiche (quando fermarsi, che gomme montare) sono ormai troppo complesse per essere prese solo "a sensazione". Qui entrano in gioco l'Intelligenza Artificiale e il Machine Learning.</p>
         </div>
 
-        <br>
-        <a href="index.html" class="btn btn-nav">&larr; Torna alla Home</a>
+        <div class="split-section">
+            <div class="split-text">
+                <h3>Simulazioni Monte Carlo in Real-Time</h3>
+                <p>I team utilizzano potenti computer nei box che eseguono costantemente simulazioni probabilistiche (Metodo Monte Carlo). Il software proietta la gara nel futuro analizzando milioni di scenari possibili.</p>
+                <p>Il sistema risponde a domande complesse:</p>
+                <ul>
+                    <li><em>"Se entra una Safety Car tra 10 minuti, ci conviene fermarci ora o dopo?"</em></li>
+                    <li><em>"Con l'attuale tasso di degrado delle gomme, riusciremo a fare un triplo stint?"</em></li>
+                </ul>
+                <p>Il risultato è un grafico di probabilità di vittoria che guida il capo stratega nella decisione finale.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Grafici Strategia">
+            </div>
+        </div>
+
+        <div class="tech-box">
+            <h3>Virtual Energy Tank & Hybrid Deployment</h3>
+            <p>Le regole delle Hypercar impongono un limite massimo di energia utilizzabile per ogni stint (in MegaJoule). L'auto non può usare tutta la potenza sempre.</p>
+            <p>Un algoritmo di gestione energetica mappa il circuito metro per metro. Decide automaticamente dove tagliare potenza (Lift and Coast) e dove usare il motore elettrico per massimizzare l'efficienza. Il pilota sente un "bip" nell'orecchio quando deve alzare il piede dall'acceleratore per risparmiare carburante ed energia, tutto calcolato dall'AI per finire il giro con il serbatoio virtuale a 0.01%.</p>
+        </div>
+
+        <div class="split-section reverse">
+            <div class="split-text">
+                <h3>Il Meteo e il Crossover Point</h3>
+                <p>Il circuito della Sarthe è così lungo che può piovere su una parte e esserci il sole sull'altra. I team usano radar meteo locali ad alta precisione integrati nel software di strategia.</p>
+                <p>L'AI calcola il "Crossover Point": il momento matematico esatto in cui una gomma da bagnato (Wet) diventa più lenta di una gomma Slick su asfalto che si sta asciugando. Fermarsi un giro troppo presto o un giro troppo tardi rispetto a questo calcolo può costare la gara.</p>
+            </div>
+            <div class="split-image">
+                <img src="https://images.unsplash.com/photo-1516972088899-70dc9f37920a?auto=format&fit=crop&w=600&q=80" alt="Gara sotto la pioggia">
+            </div>
+        </div>
+
+        <div class="fact-box">
+            <strong>Lo Sapevi?</strong> L'automazione è vietata in un'area specifica: la partenza dai box. Nonostante l'auto abbia la tecnologia per partire da sola, il regolamento impone che il pilota debba gestire manualmente la frizione e l'acceleratore per lasciare la piazzola, introducendo un elemento di errore umano in un sistema altrimenti perfetto.
+        </div>
+
+        <a href="index.html" class="btn" style="margin-top: 40px;">&larr; Torna alla Dashboard</a>
     </div>
 
-    <footer>
-        <p>Fonti utilizzate per questa pagina:</p>
-        <p><a href="https://www.brembo.com" target="_blank">Brembo Technical Data</a>, <a href="https://www.michelinmotorsport.com" target="_blank">Michelin Motorsport</a>.</p>
+    <footer class="checkered-flag">
+        <div class="footer-content">
+            <p>Fonti per la strategia:</p>
+            <p><a href="https://www.autosport.com" target="_blank">Autosport Engineering</a> | <a href="https://www.racecar-engineering.com" target="_blank">Racecar Engineering Magazine</a></p>
+        </div>
     </footer>
 
 </body>

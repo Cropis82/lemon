@@ -8,65 +8,69 @@
 </head>
 <body>
 
-    <header>
-        <h1>24H Le Mans: Tech Insight</h1>
-        <p>L'ingegneria e i dati dietro la gara di endurance più famosa al mondo</p>
+    <header class="checkered-flag">
+        <div class="header-content">
+            <h1>24H Le Mans: Tech Insight</h1>
+            <p>Esplorazione tecnica dell'ecosistema dati nel World Endurance Championship</p>
+        </div>
     </header>
 
     <div class="container">
-        <div class="grid-wrapper">
+        <div class="vertical-stack">
             
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=500&q=60" alt="Auto da corsa">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1599951666679-b4f74d0d024e?auto=format&fit=crop&w=800&q=80" alt="Dettaglio Sospensioni">
+                </div>
                 <div class="card-content">
-                    <h3>1. I Sensi dell'Auto</h3>
-                    <p>Quali sensori vengono utilizzati per monitorare ogni millimetro della vettura?</p>
-                    <a href="sensori.html" class="btn">Approfondisci</a>
+                    <h3>1. Sensoristica Avanzata</h3>
+                    <p>Una Hypercar moderna è un laboratorio viaggiante. Oltre 300 sensori mappano ogni parametro fisico: dalla temperatura dei dischi in carbonio alla pressione istantanea nelle camere di scoppio. Scopri come l'IMU, i tubi di Pitot e i sensori laser trasformano la realtà fisica in un flusso di bit essenziale per la sopravvivenza dell'auto nelle 24 ore.</p>
+                    <a href="sensori.html" class="btn">Analisi Hardware</a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=60" alt="Schermi Dati">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Monitor Telemetria Box">
+                </div>
                 <div class="card-content">
                     <h3>2. Flusso Dati & Telemetria</h3>
-                    <p>Come vengono raccolti, trasmessi e analizzati i terabyte di dati durante la 24 ore.</p>
-                    <a href="telemetria.html" class="btn">Approfondisci</a>
+                    <p>I dati non servono a nulla se non vengono trasmessi. Approfondisci l'infrastruttura di rete che permette di inviare gigabyte di dati dall'auto al muretto box tramite 4G/LTE e Wi-Fi burst. Analizziamo come gli ingegneri di pista interpretano le tracce di MoTeC e Wintax per prendere decisioni in millesimi di secondo.</p>
+                    <a href="telemetria.html" class="btn">Vedi i Grafici</a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=500&q=60" alt="Intelligenza Artificiale">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee481c?auto=format&fit=crop&w=800&q=80" alt="Software Strategia">
+                </div>
                 <div class="card-content">
-                    <h3>3. Algoritmi e IA</h3>
-                    <p>L'uso del Machine Learning per prevedere strategie, meteo e consumi.</p>
-                    <a href="ai_strategy.html" class="btn">Approfondisci</a>
+                    <h3>3. AI e Strategia di Gara</h3>
+                    <p>L'intuizione umana non basta più. Algoritmi di Machine Learning e simulazioni Monte Carlo prevedono l'evoluzione della gara, il degrado gomme e le probabilità di Safety Car. Scopri come l'Intelligenza Artificiale ottimizza l'erogazione dell'energia ibrida per completare un giro in più rispetto agli avversari.</p>
+                    <a href="ai_strategy.html" class="btn">Algoritmi</a>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1614741118830-c7344799042d?auto=format&fit=crop&w=500&q=60" alt="Simulatore">
-                <div class="card-content">
-                    <h3>4. Il Mondo Virtuale</h3>
-                    <p>Driver-in-the-loop e digital twins: come si vince la gara prima di partire.</p>
-                    <a href="simulazione.html" class="btn">Approfondisci</a>
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=800&q=80" alt="Simulatore">
                 </div>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1543486978-8d4170bb86fd?auto=format&fit=crop&w=500&q=60" alt="Freni e ruota">
                 <div class="card-content">
-                    <h3>5. Fisica della Gara</h3>
-                    <p>Accelerazione laterale, frenata e interpretazione delle tracce.</p>
-                    <a href="fisica.html" class="btn">Approfondisci</a>
+                    <h3>4. Il Digital Twin</h3>
+                    <p>La gara si vince mesi prima in fabbrica. Attraverso i simulatori Driver-in-the-Loop (DiL) e i gemelli digitali, i team sviluppano l'assetto ideale senza scendere in pista. Analizziamo come la correlazione tra dati virtuali e reali sia la chiave per il successo.</p>
+                    <a href="simulazione.html" class="btn">Mondo Virtuale</a>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <footer>
-        <p>Progetto didattico HTML/CSS.</p>
-        <p>Fonti: <a href="https://www.fiawec.com" target="_blank">FIA WEC</a> | <a href="https://www.24h-lemans.com" target="_blank">ACO Le Mans</a></p>
+    <footer class="checkered-flag">
+        <div class="footer-content">
+            <p>Progetto Educativo: Le Mans Tech & Data.</p>
+            <p>Fonti Ufficiali: <a href="https://www.fiawec.com" target="_blank">FIA WEC</a> | <a href="https://www.24h-lemans.com" target="_blank">ACO Le Mans</a></p>
+            <p>&copy; 2023 Endurance Data Project</p>
+        </div>
     </footer>
 
 </body>
